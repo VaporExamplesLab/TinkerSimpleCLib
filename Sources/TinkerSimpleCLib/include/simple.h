@@ -5,8 +5,8 @@
 
 #define SIMPLE_VERSION        "0.0.1"
 
-//#include "simple2.h"
-double mean(double a, double b);
-
+#include "simple2.h"
+//double mean(double a, double b);
 
 #endif /* simple_h */
+
