@@ -1,9 +1,14 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
     name: "TinkerSimpleCLib",
+    platforms: [
+        // specify each minimum deployment requirement, 
+        // otherwise the platform default minimum is used.
+        .macOS(.v10_13), // ..v10_13 High Sierra .v10_14 Mojave, .v10_15 Catalina 
+    ],
     products: [
         .library(
             name: "TinkerSimpleCLib",
@@ -19,5 +24,5 @@ let package = Package(
             name: "TinkerSimpleCLibTests",
             dependencies: ["TinkerSimpleCLib"]),
     ],
-    swiftLanguageVersions: [4]
+    swiftLanguageVersions: [.v5]
 )
